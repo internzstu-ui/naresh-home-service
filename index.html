@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexHome - AI Automated Home Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Dela+Gothic+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
+                    <path d="M20 5L5 15V30L20 40L35 30V15L20 5Z" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="20" cy="20" r="6" fill="currentColor"/>
+                </svg>
+                <span class="brand-name">NexHome</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-secondary" onclick="showLoginModal()">Login</button>
+                <button class="btn-primary" onclick="showBookingModal()">Book Service</button>
+            </div>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">AI-Powered Home Automation</div>
+                <h1 class="hero-title">
+                    Your Home,<br>
+                    <span class="highlight">Intelligently</span><br>
+                    Managed
+                </h1>
+                <p class="hero-description">
+                    Experience the future of home services with AI-driven cleaning, maintenance, and automation. 
+                    Schedule, monitor, and optimize everything from one platform.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn-large btn-primary" onclick="showBookingModal()">
+                        Get Started Free
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7 3L14 10L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <button class="btn-large btn-outline" onclick="document.getElementById('demo-video').scrollIntoView({behavior: 'smooth'})">
+                        Watch Demo
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Happy Homes</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">99.8%</span>
+                        <span class="stat-label">Satisfaction Rate</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">AI Monitoring</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="device-mockup">
+                    <div class="mockup-screen">
+                        <div class="dashboard-preview">
+                            <div class="preview-header">
+                                <div class="preview-dot"></div>
+                                <div class="preview-dot"></div>
+                                <div class="preview-dot"></div>
+                            </div>
+                            <div class="preview-content">
+                                <div class="preview-card" style="animation-delay: 0.2s;">
+                                    <div class="card-icon">🧹</div>
+                                    <div class="card-info">
+                                        <div class="card-title">Cleaning Scheduled</div>
+                                        <div class="card-status">Tomorrow, 9:00 AM</div>
+                                    </div>
+                                </div>
+                                <div class="preview-card" style="animation-delay: 0.4s;">
+                                    <div class="card-icon">🔧</div>
+                                    <div class="card-info">
+                                        <div class="card-title">Maintenance Check</div>
+                                        <div class="card-status">In Progress</div>
+                                    </div>
+                                </div>
+                                <div class="preview-card" style="animation-delay: 0.6s;">
+                                    <div class="card-icon">🌡️</div>
+                                    <div class="card-info">
+                                        <div class="card-title">Climate Control</div>
+                                        <div class="card-status">72°F - Optimal</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Services</span>
+                <h2 class="section-title">Everything Your Home Needs</h2>
+                <p class="section-description">AI-powered services that adapt to your lifestyle and preferences</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 60 60" fill="none">
+                            <rect x="10" y="20" width="40" height="30" rx="4" stroke="currentColor" stroke-width="2"/>
+                            <path d="M20 15L30 10L40 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="30" cy="35" r="8" fill="currentColor" opacity="0.2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">AI Cleaning</h3>
+                    <p class="service-description">Smart scheduling, robotic cleaners, and professional teams coordinated by AI for spotless results.</p>
+                    <ul class="service-features">
+                        <li>Robotic vacuum & mop integration</li>
+                        <li>Professional deep cleaning</li>
+                        <li>Smart scheduling optimization</li>
+                        <li>Real-time progress tracking</li>
+                    </ul>
+                    <button class="service-btn" onclick="bookService('cleaning')">Book Cleaning</button>
+                </div>
+
+                <div class="service-card featured">
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 60 60" fill="none">
+                            <path d="M30 10L45 20V40L30 50L15 40V20L30 10Z" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="30" cy="30" r="10" fill="currentColor" opacity="0.2"/>
+                            <path d="M30 20V30L35 35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Smart Maintenance</h3>
+                    <p class="service-description">Predictive maintenance using IoT sensors and AI to prevent issues before they happen.</p>
+                    <ul class="service-features">
+                        <li>Predictive diagnostics</li>
+                        <li>24/7 system monitoring</li>
+                        <li>Emergency response team</li>
+                        <li>Preventive maintenance plans</li>
+                    </ul>
+                    <button class="service-btn" onclick="bookService('maintenance')">Book Maintenance</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 60 60" fill="none">
+                            <rect x="15" y="15" width="30" height="30" rx="4" stroke="currentColor" stroke-width="2"/>
+                            <path d="M25 25H35M25 30H35M25 35H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="42" cy="18" r="8" fill="currentColor" opacity="0.2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Home Automation</h3>
+                    <p class="service-description">Complete smart home setup and integration with voice control and automated routines.</p>
+                    <ul class="service-features">
+                        <li>Smart device installation</li>
+                        <li>Voice assistant integration</li>
+                        <li>Custom automation routines</li>
+                        <li>Energy optimization</li>
+                    </ul>
+                    <button class="service-btn" onclick="bookService('automation')">Setup Automation</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 60 60" fill="none">
+                            <path d="M30 15L40 25L30 35L20 25L30 15Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M30 35V45M25 45H35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="30" cy="25" r="6" fill="currentColor" opacity="0.2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Garden Care</h3>
+                    <p class="service-description">AI-powered irrigation, lawn care, and landscaping services tailored to your garden's needs.</p>
+                    <ul class="service-features">
+                        <li>Smart irrigation systems</li>
+                        <li>Seasonal lawn maintenance</li>
+                        <li>Plant health monitoring</li>
+                        <li>Landscaping design</li>
+                    </ul>
+                    <button class="service-btn" onclick="bookService('garden')">Book Garden Care</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 60 60" fill="none">
+                            <circle cx="30" cy="30" r="15" stroke="currentColor" stroke-width="2"/>
+                            <path d="M30 20V30H40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="30" cy="30" r="20" stroke="currentColor" stroke-width="2" opacity="0.2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Security Monitoring</h3>
+                    <p class="service-description">AI-driven security with facial recognition, anomaly detection, and instant alerts.</p>
+                    <ul class="service-features">
+                        <li>24/7 AI video monitoring</li>
+                        <li>Facial recognition</li>
+                        <li>Intrusion detection</li>
+                        <li>Emergency dispatch</li>
+                    </ul>
+                    <button class="service-btn" onclick="bookService('security')">Setup Security</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 60 60" fill="none">
+                            <path d="M20 25L30 20L40 25V40L30 45L20 40V25Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M30 30L35 35M30 30L25 35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="30" cy="30" r="4" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Energy Management</h3>
+                    <p class="service-description">Optimize energy consumption with AI analytics and smart device coordination.</p>
+                    <ul class="service-features">
+                        <li>Energy usage analytics</li>
+                        <li>Smart thermostat control</li>
+                        <li>Solar panel optimization</li>
+                        <li>Cost reduction insights</li>
+                    </ul>
+                    <button class="service-btn" onclick="bookService('energy')">Optimize Energy</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Simple Process</span>
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-description">Get started in three simple steps</p>
+            </div>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Choose Your Service</h3>
+                        <p>Select from our range of AI-powered home services. Our intelligent system will recommend the best options based on your home's needs.</p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="visual-icon">📱</div>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-item">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>AI Scheduling</h3>
+                        <p>Our AI analyzes your calendar, preferences, and home patterns to suggest optimal service times. You can also customize as needed.</p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="visual-icon">🤖</div>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-item">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Relax & Monitor</h3>
+                        <p>Track service progress in real-time, receive updates, and rate the experience. Our AI learns from your feedback for continuous improvement.</p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="visual-icon">✨</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Video Section -->
+    <section id="demo-video" class="demo-section">
+        <div class="container">
+            <div class="demo-content">
+                <div class="demo-text">
+                    <h2>See NexHome in Action</h2>
+                    <p>Watch how our AI seamlessly manages your home services, from scheduling to completion. Experience the future of home automation.</p>
+                    <button class="btn-primary" onclick="showBookingModal()">Start Your Free Trial</button>
+                </div>
+                <div class="demo-video">
+                    <div class="video-placeholder">
+                        <div class="play-button">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                <circle cx="30" cy="30" r="28" stroke="white" stroke-width="2"/>
+                                <path d="M25 20L40 30L25 40V20Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <p>Product Demo Video</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Pricing Plans</span>
+                <h2 class="section-title">Choose Your Plan</h2>
+                <p class="section-description">Flexible plans that grow with your needs</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Starter</h3>
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount">29</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="plan-description">Perfect for apartments and small homes</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✓ 2 Services per month</li>
+                        <li>✓ Basic AI scheduling</li>
+                        <li>✓ Mobile app access</li>
+                        <li>✓ Email support</li>
+                        <li>✓ Service history tracking</li>
+                    </ul>
+                    <button class="plan-button" onclick="selectPlan('starter')">Get Started</button>
+                </div>
+
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h3 class="plan-name">Professional</h3>
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount">79</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="plan-description">Ideal for families and larger homes</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✓ 8 Services per month</li>
+                        <li>✓ Advanced AI optimization</li>
+                        <li>✓ Priority scheduling</li>
+                        <li>✓ 24/7 phone support</li>
+                        <li>✓ Smart device integration</li>
+                        <li>✓ Energy analytics</li>
+                        <li>✓ Predictive maintenance</li>
+                    </ul>
+                    <button class="plan-button" onclick="selectPlan('professional')">Get Started</button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Enterprise</h3>
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount">199</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="plan-description">For luxury homes and estates</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✓ Unlimited services</li>
+                        <li>✓ Full AI automation suite</li>
+                        <li>✓ Dedicated account manager</li>
+                        <li>✓ White-glove service</li>
+                        <li>✓ Custom integrations</li>
+                        <li>✓ Advanced security features</li>
+                        <li>✓ Quarterly home audits</li>
+                        <li>✓ VIP support access</li>
+                    </ul>
+                    <button class="plan-button" onclick="selectPlan('enterprise')">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Have questions? Our AI-powered support team is here to help 24/7.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">📧</div>
+                            <div class="method-details">
+                                <h4>Email Us</h4>
+                                <p>support@nexhome.ai</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="method-icon">📞</div>
+                            <div class="method-details">
+                                <h4>Call Us</h4>
+                                <p>1-800-NEX-HOME</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="method-icon">💬</div>
+                            <div class="method-details">
+                                <h4>Live Chat</h4>
+                                <p>Available 24/7</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
+                            <path d="M20 5L5 15V30L20 40L35 30V15L20 5Z" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="20" cy="20" r="6" fill="currentColor"/>
+                        </svg>
+                        <span>NexHome</span>
+                    </div>
+                    <p>AI-powered home services for the modern lifestyle. Making home management effortless.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">AI Cleaning</a></li>
+                        <li><a href="#services">Smart Maintenance</a></li>
+                        <li><a href="#services">Home Automation</a></li>
+                        <li><a href="#services">Security</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#press">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NexHome. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Welcome Back</h2>
+            <form id="loginForm" class="modal-form">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn-primary">Login</button>
+                <p class="form-footer">Don't have an account? <a href="#" onclick="showSignupModal()">Sign up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('bookingModal')">&times;</span>
+            <h2>Book a Service</h2>
+            <form id="bookingForm" class="modal-form">
+                <div class="form-group">
+                    <label for="bookingService">Service Type</label>
+                    <select id="bookingService" required>
+                        <option value="">Select a service</option>
+                        <option value="cleaning">AI Cleaning</option>
+                        <option value="maintenance">Smart Maintenance</option>
+                        <option value="automation">Home Automation</option>
+                        <option value="garden">Garden Care</option>
+                        <option value="security">Security Monitoring</option>
+                        <option value="energy">Energy Management</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="bookingDate">Preferred Date</label>
+                    <input type="date" id="bookingDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookingTime">Preferred Time</label>
+                    <input type="time" id="bookingTime" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookingAddress">Address</label>
+                    <input type="text" id="bookingAddress" placeholder="Enter your address" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookingNotes">Additional Notes</label>
+                    <textarea id="bookingNotes" rows="3" placeholder="Any special requirements?"></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
